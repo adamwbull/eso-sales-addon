@@ -1,0 +1,113 @@
+<GuiXml>
+    <Controls>
+        <TopLevelControl name="ESOSalesReloadWindow" clampedToScreen="true" mouseEnabled="true" movable="true" hidden="true">
+            <Dimensions x="400" y="350" />
+            <DimensionConstraints minX="400" minY="350" />
+            <Anchor point="CENTER" relativeTo="GuiRoot" relativePoint="CENTER" />
+            
+            <Controls>
+                <!-- Background -->
+                <Backdrop name="$(parent)BG" inherits="ZO_DefaultBackdrop" />
+                
+                <!-- Title Bar -->
+                <Control name="$(parent)Toolbar" mouseEnabled="true">
+                    <Anchor point="TOPLEFT" />
+                    <Anchor point="TOPRIGHT" />
+                    <Dimensions y="30" />
+                    
+                    <Controls>
+                        <Backdrop name="$(parent)BG" inherits="ZO_DefaultBackdrop" />
+                        <Label name="$(parent)Title" font="ZoFontGameBold" horizontalAlignment="LEFT" verticalAlignment="CENTER">
+                            <Anchor point="TOPLEFT" offsetX="10" offsetY="5"/>
+                            <Dimensions y="30" />
+                        </Label>
+
+                        <!-- Close Button -->
+                        <Button name="$(parent)Close" inherits="ZO_CloseButton">
+                            <Anchor point="TOPRIGHT" offsetX="-10" offsetY="5"/>
+                            <OnClicked>ESOSales.OnCloseClicked(self)</OnClicked>
+                        </Button>
+                    </Controls>
+                </Control>
+
+                <!-- Main Content -->
+                <Control name="$(parent)Content">
+                    <Anchor point="TOPLEFT" relativeTo="$(parent)Toolbar" relativePoint="BOTTOMLEFT" offsetX="10" offsetY="10"/>
+                    <Anchor point="BOTTOMRIGHT" offsetX="-10" offsetY="-50"/>
+                    
+                    <Controls>
+                        <!-- Line 1 -->
+                        <Label name="$(parent)Message1" font="ZoFontGame" horizontalAlignment="CENTER" text="Sales data has been saved locally.">
+                            <Anchor point="TOPLEFT" offsetY="20" />
+                            <Anchor point="TOPRIGHT" offsetY="20" />
+                        </Label>
+
+                        <!-- Line 2 -->
+                        <Label name="$(parent)Message2" font="ZoFontGame" horizontalAlignment="CENTER" text="In order to sync data, you need to Reload UI. Do this by clicking the button below, or typing /reloadui">
+                            <Anchor point="TOPLEFT" relativeTo="$(parent)Message1" relativePoint="BOTTOMLEFT" offsetY="20" />
+                            <Anchor point="TOPRIGHT" relativeTo="$(parent)Message1" relativePoint="BOTTOMRIGHT" offsetY="20" />
+                        </Label>
+
+                        <!-- Line 3 -->
+                        <Label name="$(parent)Message3" font="ZoFontGame" horizontalAlignment="CENTER" text="By default, this window will appear once per 24 hours. Feel free to disable it permanently below.">
+                            <Anchor point="TOPLEFT" relativeTo="$(parent)Message2" relativePoint="BOTTOMLEFT" offsetY="20" />
+                            <Anchor point="TOPRIGHT" relativeTo="$(parent)Message2" relativePoint="BOTTOMRIGHT" offsetY="20" />
+                        </Label>
+                    </Controls>
+                </Control>
+
+                <!-- Bottom Buttons -->
+                <Control name="$(parent)ButtonContainer">
+                    <Anchor point="BOTTOMLEFT" offsetX="10" offsetY="-10"/>
+                    <Anchor point="BOTTOMRIGHT" offsetX="-10" offsetY="-10"/>
+                    <Dimensions y="40" />
+                    
+                    <Controls>
+                        <!-- Don't Show Again Checkbox -->
+                        <Control name="$(parent)CheckboxContainer">
+                            <Anchor point="BOTTOMLEFT" offsetY="-50"/>
+                            <Dimensions x="200" y="30" />
+                            
+                            <Controls>
+                                <Button name="$(parent)Checkbox" inherits="ZO_CheckButton">
+                                    <Anchor point="LEFT" />
+                                    <OnInitialized>
+                                        ZO_CheckButton_SetLabelText(self, "Never show window this again")
+                                    </OnInitialized>
+                                </Button>
+                            </Controls>
+                        </Control>
+
+                    </Controls>
+                </Control>
+
+                <!-- Footer Row 2 -->
+                <Control name="$(parent)FooterRow2" resizeToFitDescendents="true">
+                    <Anchor point="BOTTOMLEFT" relativeTo="$(parent)ButtonContainer" relativePoint="BOTTOMLEFT" />
+                    <Anchor point="BOTTOMRIGHT" relativeTo="$(parent)ButtonContainer" relativePoint="BOTTOMRIGHT" offsetY="5" />
+                    <Controls>
+                        <Control name="$(parent)CenterParent" resizeToFitDescendents="true">
+                            <Anchor point="CENTER" />
+                            <Controls>
+                                <Button name="$(parent)Dismiss" inherits="ZO_DefaultButton">
+                                    <Anchor point="LEFT" />
+                                    <Dimensions x="100" y="28" />
+                                    <OnClicked>
+                                        ESOSalesAddon.OnCloseClicked(self)
+                                    </OnClicked>
+                                </Button>
+                                <Button name="$(parent)Reload" inherits="ZO_DefaultButton">
+                                    <Anchor point="LEFT" relativeTo="$(parent)Dismiss" relativePoint="RIGHT" offsetX="80"/>
+                                    <Dimensions x="100" y="28" />
+                                    <OnClicked>
+                                        ESOSalesAddon.OnReloadClicked(self)
+                                    </OnClicked>
+                                </Button>
+                            </Controls>
+                        </Control>
+                    </Controls>
+                </Control>
+            </Controls>
+        </TopLevelControl>
+    </Controls>
+</GuiXml> 

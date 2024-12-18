@@ -1,0 +1,18 @@
+## Title: ESO Sales
+## Author: @cymi
+## Version: 1.0.0
+## AddOnVersion: 1
+## APIVersion: 101042
+## IsLibrary: false
+## DependsOn: LibHistoire
+## SavedVariables: ESOSales_Settings ESOSales_Bucket1 ESOSales_Bucket2 ESOSales_Bucket3 ESOSales_Bucket4 ESOSales_Bucket5 ESOSales_Bucket6 ESOSales_Bucket7 ESOSales_Bucket8 ESOSales_Bucket9 ESOSales_Bucket10
+## Description: ESO Sales is an addon that reports sales data to eso-sales.com for you and others to view.
+##
+## This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. 
+## The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. 
+## All rights reserved
+##
+## You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+ESOSales.xml
+ESOSales.lua

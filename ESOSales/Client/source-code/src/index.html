@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ESO Sales Launcher</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="banner"></div>
+    
+    <div class="container">
+      
+      <div class="super-section">
+        <div class="title-row">
+          <h1 class="title">ESO Sales</h1>
+          <p class="subtitle">Sync sold guild items to <a href="https://eso-sales.com" target="_blank">eso-sales.com</a><br /> for sales stats and notifications when items sell.</p>
+        </div>
+        <div class="section">
+          <div class="section-row">
+            <div class="checkbox-row">
+              <input type="checkbox" id="useEsoSales">
+              <label for="useEsoSales">Use ESO Sales</label>
+            </div>
+          </div>
+          <div id="addonStatus" class="status-message hidden"></div>
+        </div>
+  
+        <div class="section">
+          <div class="shortcut-buttons">
+            <button id="createDesktopShortcut" class="shortcut-button">Create ESO Sales Desktop Shortcut</button>
+            <button id="pinToStart" class="shortcut-button">Add to Start Menu</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="super-section">
+        <div class="title-row">
+          <h1 class="title">TTC</h1>
+          <p class="subtitle">Sync guild store listings to <a href="https://tamrieltradecentre.com" target="_blank">tamrieltradecentre.com</a><br>
+          ensuring items are seen by potential buyers.</p>
+        </div>
+        <div class="section">
+          <div class="checkbox-row">
+            <input type="checkbox" id="useTTC">
+            <label for="useTTC">Use Tamriel Trade Centre</label>
+          </div>
+          <div id="ttcStatus" class="status-message hidden"></div>
+          <div class="launch-method">
+            <div class="input-with-button">
+              <input type="text" id="ttcPath" class="text-input">
+              <button id="ttcBrowse">Browse</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="super-section">
+        <div class="title-row">
+          <h1 class="title">ESO Launch Method</h1>
+        </div>
+        <div class="section">
+          <div class="launch-method">
+            <div class="checkbox-row">
+              <input type="checkbox" id="steamLaunch">
+              <label for="steamLaunch">Launch with Steam</label>
+            </div>
+            <div class="input-without-button">
+              <input type="text" id="steamPath" class="text-input">
+            </div>
+          </div>
+
+          <div class="launch-method">
+            <div class="checkbox-row">
+              <input type="checkbox" id="bethesdaLaunch">
+              <label for="bethesdaLaunch">Launch with Bethesda.net</label>
+            </div>
+            <div class="input-with-button">
+              <input type="text" id="bethesdaPath" class="text-input">
+              <button id="bethesdaBrowse">Browse</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="play-section">
+        <div class="auto-launch-container">
+          <div class="checkbox-row">
+            <input type="checkbox" id="autoLaunch">
+            <label for="autoLaunch">Enable auto launch</label>
+          </div>
+          <p id="autoLaunchHint" class="auto-launch-hint">
+            Launch checked modules on future startups.
+          </p>
+        </div>
+        <div id="countdown"></div>
+        <button id="playButton">PLAY ESO</button>
+      </div>
+      
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+
+</html>

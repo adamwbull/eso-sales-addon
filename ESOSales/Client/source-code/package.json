@@ -1,0 +1,36 @@
+{
+  "name": "eso-sales-launcher",
+  "productName": "ESOSalesLauncher",
+  "version": "1.0.0",
+  "description": "A bundled launcher to start up Elder Scrolls Online, ESO Sales client, or TTC client.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.5.0",
+    "@electron-forge/maker-deb": "^7.5.0",
+    "@electron-forge/maker-rpm": "^7.5.0",
+    "@electron-forge/maker-squirrel": "^7.5.0",
+    "@electron-forge/maker-zip": "^7.5.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.5.0",
+    "@electron-forge/plugin-fuses": "^7.5.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "33.2.0",
+    "electron-reloader": "^1.2.3"
+  },
+  "keywords": [],
+  "author": {
+    "name": "adamwbull",
+    "email": "adamwbullard@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "electron-store": "^8.1.0"
+  }
+}

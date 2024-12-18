@@ -1,0 +1,293 @@
+:root {
+  --bg-color: #1e1e1e;
+  --bg-color-alt: #121212;
+  --text-color: #ffffff;
+  --accent-color: #0078d4;
+  --disabled-color: #666666;
+  --success-color: #2ea043;
+  --error-color: #f85149;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  align-items: center;
+  font-size: 14px;
+}
+
+.super-section {
+  background-color: var(--bg-color-alt);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.section-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  padding-bottom: 0.5rem;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+}
+
+#banner {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.title-row {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  border-bottom: 1px solid #404040;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.title {
+  flex:1;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.subtitle {
+  color: #cccccc;
+  font-size: 0.775rem;
+  flex:2;
+  text-align: right;
+}
+
+.section {
+  margin:0;
+}
+
+.shortcut-buttons {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.shortcut-buttons button {
+  flex: 1;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.5rem;
+}
+
+.shortcut-buttons button.completed {
+  background-color: #2ea04320;
+  border-color: #238636;
+  color: #238636;
+  cursor: default;
+}
+
+.shortcut-buttons button.completed:hover {
+  background-color: #2ea04320;
+}
+
+.checkmark {
+  color: #2ea043;
+}
+
+.text-input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  color: var(--text-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.text-input:disabled {
+  background-color: #252525;
+  color: var(--disabled-color);
+}
+
+.input-with-button {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-without-button {
+  width: 100%;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #3d3d3d;
+}
+
+.status-message {
+  font-size: 0.8rem;
+  font-style: italic;
+  padding-bottom: 0.5rem;
+}
+
+.status-message.success {
+  color: var(--success-color);
+}
+
+.status-message.error {
+  color: var(--error-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.play-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.auto-launch-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.auto-launch-container .checkbox-row label {
+  font-size: 0.9rem;
+}
+
+.auto-launch-hint {
+  font-size: 0.7rem;
+  color: #cccccc;
+  margin-top: -0.25rem;
+}
+
+#playButton {
+  background-color: #27ae60;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#playButton:hover {
+  background-color: #1A7540;
+}
+
+#playButton[data-state="pause"] {
+  background-color: #d83b01;  /* Orange-red color */
+}
+
+#playButton[data-state="pause"]:hover {
+  background-color: #a42e01;
+}
+
+.launch-method {
+  margin-bottom: 1rem;
+}
+
+#countdown {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2b98ff;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #9b7eda;
+}
+
+a:active {
+  color: #005fb8;
+}
+
+a:focus {
+  outline: 2px solid #2b98ff40;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+p a {
+  border-bottom: 1px solid transparent;
+}
+
+p a:hover {
+  border-bottom-color: currentColor;
+}
+
+.addon-link {
+  color: var(--success-color);
+  text-decoration: none;
+}
+
+.addon-link:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.shortcut-button.loading {
+  cursor: wait;
+  opacity: 0.8;
+}
