@@ -12,9 +12,8 @@ ESOSales is an addon for Elder Scrolls Online that tracks and reports your guild
 - Sale notifications and data analysis via ESO-Sales.com
 
 ## Requirements
-- Elder Scrolls Online (PC/Mac)
+- Elder Scrolls Online (PC)
 - LibHistoire dependency
-- Windows/Mac OS X
 
 ## Installation
 
